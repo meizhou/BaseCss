@@ -1,0 +1,244 @@
+.but(@border,@background,@font-color:#fff){
+    border-color: @border;
+    background-color: @background;
+    color: @font-color;
+}
+button,input{
+  outline: 0px;
+  margin: 0px;
+  padding: 0px;
+  *overflow:visible;
+}
+.but{
+    display:inline-block;
+    padding: 2px 10px;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    font-size: 14px;
+    line-height: 22px;
+    text-align: center;
+    cursor: pointer;
+    vertical-align: middle;
+    height: 30px;
+    *height: 30px;
+}
+.but-big{
+    width: 100%;
+}
+
+.but:active{
+    box-shadow: inset 0px 3px 5px rgba(0, 0, 0, 0.125);
+}
+.but-default{
+    .but(@input-border-color,#fff,@font-color);
+}
+.but-default:hover{
+    .but(@input-border-color-focus,#eee,@font-color);
+}
+.but-default.active{
+    .but(@input-border-color-focus,#eee,@font-color);
+}
+.but-gray{
+    .but(@input-border-color,#eee,@font-color);
+}
+.but-gray:hover{
+    .but(@input-border-color-focus,darken(#eee,5%),@font-color);
+}
+.but-red{
+    .but(darken(@red, 5%),@red,#fff);
+}
+.but-red:hover{
+    .but(darken(@red, 10%),darken(@red, 5%),#fff);
+}
+.but-green{
+    .but(darken(@green, 5%),@green,#fff);
+}
+.but-green:hover{
+    .but(darken(@green, 15%),darken(@green, 5%),#fff);
+}
+.but-blue{
+    .but(darken(@blue, 5%), @blue,#fff);
+}
+.but-blue:hover{
+    .but(darken(@blue, 10%),darken(@blue, 5%),#fff);
+}
+
+
+span.but{
+    height: 24px;
+    line-height:24px;
+}
+a.but{
+    height: 24px;
+    line-height:24px;
+}
+a.but:hover,a.but:focus{
+    color: #fff;
+    text-decoration: none;
+    &.but-gray,&.but-default {
+        color: @font-color;
+    }
+}
+.but.but-small{
+    font-size: 12px;
+    height: 20px;
+    line-height:20px;
+}
+
+
+
+.input-control{
+    padding: 3px 5px;
+    border: 1px solid @input-border-color;
+    border-radius: 3px;
+    font-size: 14px;
+    color: #333;
+    line-height: 22px;
+    height: 22px;
+    vertical-align: middle;
+    transition:border,box-shadow .2s ease-in;
+    width: 100%;
+}
+.input-mid{
+    width: 200px;
+}
+.input-small{
+    width: 80px;
+}
+textarea{
+    width: 100%;
+    height: 80px;
+    font-size: 14px;
+    transition:border,box-shadow .2s ease-in;
+    border: 1px solid @input-border-color;
+    border-radius: 3px;
+}
+textarea:focus,.input-control:focus{
+    border: 1px solid @input-border-color-focus;
+    box-shadow:inset 0px 0px 1px rgba(0,0,0,0.2),0px 0px 1px rgba(0,0,0,0.2);
+}
+.input-text{
+    display: inline;
+    line-height: 30px;
+    height: 30px;
+}
+.form{
+    position: relative;
+    background-color: #fff;
+    padding:10px;
+    padding-bottom: 0px;
+    border-radius: 5px;
+    min-height: 30px;
+    .submit{
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        z-index: 100;
+    }
+}
+.form-p10{
+    padding: 10px;
+}
+.form-border{
+    position: relative;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+}
+.form-group{
+    position: relative;
+    padding-bottom: 10px;
+    .lable{
+        text-align: right;
+        padding-right: 20px;
+        line-height: 30px;
+    }
+    .lable-top{
+        vertical-align: top;
+        line-height: normal;
+    }
+    .input-help{
+        font-size: 12px;
+        color: #555;
+    }
+    .status{
+        line-height: 30px;
+        font-size: 12px;
+        padding-left: 20px;
+    }
+}
+.checkbox-inline,.radio-inline{
+    display: inline;
+}
+.checkbox,.radio{
+    display: inline;
+    vertical-align: middle;
+    padding-right: 12px;
+    input[type='checkbox'],input[type='radio']{
+        vertical-align: middle;
+        margin-right: 6px;
+        margin-top: -5px;
+    }
+}
+.input-inline{
+    display: inline-block;
+    *zoom:1;
+    *display:inline;
+    .input-control{
+        margin-right: 10px;
+        margin-bottom: 5px;
+    }
+}
+
+
+.input-addon{
+    display: inline-block;
+    vertical-align: middle;
+    *zoom:1;
+    *display:inline;
+    input[type='radio']{
+        float: left;
+        margin: 7px;
+    }
+    .addon-text{
+        display: inline-block;
+        line-height: 28px;
+        background-color: #fff;
+        float: left;
+        padding: 0px 6px;
+        cursor: pointer;
+        border-radius: 0px 3px 3px 0px;
+        border: 1px solid #aaa;
+    }
+    .but{
+        float: left;
+        border-radius: 0px 3px 3px 0px;
+    }
+    .addon-text:hover{
+        background-color: #eee;
+    }
+    .input-control{
+        float: left;
+        border-radius: 3px 0px 0px 3px;
+        border-right:0px;
+    }
+}
+
+
+
+
+
+.text-error{
+  color: @red !important;
+}
+.text-success{
+  color: @green !important;
+}
+.input-error{
+  border: 1px solid @red !important;
+}
+.input-success{
+  border: 1px solid @green !important;
+}
+.input-error:focus,.input-success:focus{
+  box-shadow: none !important;
+}

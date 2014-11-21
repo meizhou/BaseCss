@@ -1,0 +1,84 @@
+.carousel {
+    position: relative;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom:10px;
+    img {
+        display: block;
+    }
+    .summary{
+        position: absolute;
+        bottom: 0px;
+        height: 70px;
+        background-color: #484848;
+        background-color: rgba(0, 0, 0, 0.7);
+        width: 100%;
+        a {
+            padding: 10px 30px;
+            display: block;
+            color: #fff;
+            font-size: 14px;
+            text-decoration: none;
+            outline: 0;
+            &:hover{
+                color: #ddd;
+            }
+        }
+    }
+}
+.carousel .item {
+    display: none;
+    position: absolute;
+    top:0px;
+    &.active{
+        display: block;
+        left: 0px;
+    }
+}
+.control {
+    background: url(../image/carousel.png);
+    position: absolute;
+    width: 35px;
+    height: 70px;
+    margin-top: -35px;
+    top: 50%;
+    cursor: pointer;
+}
+.control.left {
+    left: 0px;
+    background-position: -70px;
+}
+.control.left:hover {
+    background-position: -35px;
+    border-radius:3px 0px 0px 3px;
+}
+.control.right {
+    right: 0px;
+    background-position: -105px;
+}
+.control.right:hover {
+    background-position: 0px;
+    border-radius:0px 3px 3px 0px;
+}
+
+
+.carousel .index {
+    position: absolute;
+    bottom: 50px;
+    right: 80px;
+    height: 15px;
+}
+
+.carousel .index li {
+    float: left;
+    margin: 5px;
+    width: 15px;
+    height: 15px;
+    border-radius: 7.5px;
+    background: white;
+    cursor: pointer;
+}
+.carousel .index li.now {
+    background-color: black;
+    background: rgba(0, 0, 0, 0.5);
+}

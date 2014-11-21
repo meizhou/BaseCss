@@ -1,0 +1,60 @@
+
+//@import 'color.less';
+
+.nav {
+    background-color: #fff;
+    height: 60px;
+    font-size: 16px;
+    line-height: 30px;
+    margin-bottom: 10px;
+}
+.nav-header{
+    line-height: 60px;
+    font-size: 18px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    float: left;
+    padding-right:15px;
+}
+.nav-item-a{
+    color: @font-color;
+    display: inline-block;
+    padding: 0px 13px;
+    border-radius: 3px;
+    &.active{
+        background-color:@nav-color;
+        color: #fff;
+        text-decoration: none;
+        &:hover{
+            color: #fff;
+        }
+    }
+    &:hover{
+        color: @nav-color;
+    }
+}
+.nav-item{
+    float: left;
+    padding: 15px 10px;
+    .small{
+        font-size: 12px;
+        cursor: pointer;
+        color: @font-color;
+        margin-left: 2px;
+        &:hover{
+            color: @nav-color;
+        }
+    }
+}
+.nav-form{
+    margin:15px 0px 15px 0px;
+    float: left;
+}
+.nav-right{
+    margin: 15px 0px;
+    padding-right: 10px;
+    float: right;
+    color: @nav-color;
+    a{
+        color: @nav-color;
+    }
+}
